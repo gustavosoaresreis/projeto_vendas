@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body style="background-image: url(/assets/video/Design\ sem\ nome.gif)">
+    <div id="black-overlay">
+        <main id="container">
+<!---------------------------------------------------------------- VALIDAR EMAIL ------------------------------------------------------>
+
+<form id="login_form" method="post" action="Conexão.php">
+            <div id="form_header">
+                <h1 style="color: white; left: 22%;">ACEaSSE AGORA</h1>
+            </div>
+            <div id="inputs">
+                <div class="input-box" style="width: 100%;">
+                    <div class="input-field">
+                        <input type="text" id="email" autocomplete="off" name="email" placeholder="Informe seu e-mail" style="width: 431px; color: white;">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="login_button">
+                CADASTRE UMA SENHA
+            </button>
+            <div id="forgot_password" style="text-align: center;">
+                <a href="#" style="color: white;text-decoration: underline;/* position: fixed; *//* right: 216px; */">
+                    Já possui uma conta? Clique aqui.
+                </a>
+            </div>
+        </form>
+<!---------------------------------------------------------------- CADASTRAR SENHA ------------------------------------------------------>
+        <form id="login_form" method="post" action="Conexão.php"style="display: none;">
+                <div id="form_header">
+                    <h1 style="color: white; left: 22%;">CRIE SUA SENHA</h1>
+                </div>
+                <div id="inputs">
+                    <div class="input-box" style="width: 100%;">
+                        <div class="input-field">
+                            <input type="text" id="password" autocomplete="off" name="password" placeholder="Insira sua senha" style="width: 431px; color: white;">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="login_button">
+                    ENTRAR
+                </button>
+            </form>
+            <footer>
+                <img src="assets/imgs/200x150-br-horizontal.png" alt="" style="position: fixed;left: 75%;top: 80%;width: 153px;">
+              </footer>
+            
+        </main>
+    </div>
+</body>
+</html>
