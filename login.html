@@ -9,26 +9,27 @@
     <script type="text/javascript" src="assets/js/login.js"></script>
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
-<body style="background-image: url(/assets/video/Design\ sem\ nome.gif)">
+<body style="background-image: url(/assets/video/video.gif)">
     <div id="black-overlay">
         <main id="container">
-<form id="login_form" method="post" action="Conexão.php">
+    <!---------------------------------------------------------------- VALIDAR EMAIL/SENHA ------------------------------------------------------>
+<form id="login_form">
             <div id="form_header">
                 <h1 style="color: white;left: 37%;">LOGIN</h1>
             </div>
             <div id="inputs">
                 <div class="input-box" style="width: 100%;">
                     <div class="input-field">
-                        <input type="text" id="email" autocomplete="off" name="email" placeholder="Informe seu e-mail" style="width: 431px; color: white;">
+                        <input type="text" id="emailLogin" autocomplete="off" name="emailLogin" placeholder="Informe seu e-mail" style="width: 431px; color: white;">
                     </div>
                 </div>
             </div>
-                        <div class="input-field">
-                          
-                            <input type="password" id="password" autocomplete="off"  placeholder="Insira sua senha" name="password" style="color: white;width: 431px;">
-                            <i class="fa-solid fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
-                        </div>
-                        <div id="textoAlerta" style="display: none;color: white;">Caps Lock Ativado!</div>
+                <div class="input-field">
+                    
+                    <input type="password" id="password" autocomplete="off"  placeholder="Insira sua senha" name="password" style="color: white;width: 431px;">
+                    <i class="fa-solid fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+                </div>
+                    <div id="textoAlerta" style="display: none;color: white;">Caps Lock Ativado!</div>
             <button type="submit" id="login_button">
                ENTRAR
             </button>
@@ -37,10 +38,10 @@
                     Esqueci minha senha.
                 </a>
             </div>
-        </form>
+</form>
         <footer>
             <img src="assets/imgs/200x150-br-horizontal.png" alt="" style="position: fixed;left: 75%;top: 80%;width: 153px;">
-          </footer>
+        </footer>
         </main>
     </div>
 </body>

@@ -1,33 +1,41 @@
-const mode = document.getElementById('mode_icon');
+document.addEventListener('DOMContentLoaded', function () {
+    const emailInput = document.getElementById('email');
+    const loginButton = document.getElementById('login_button');
 
+    loginButton.addEventListener('click', async function () {
+        const email = emailInput.value.trim();
+        if (!email) {
+            alert('Por favor, preencha seu e-mail.');
+            return;
+        }
+        const isValidEmail = await searchEmail(email);
 
-function togglePasswordVisibility() {
-    var passwordInput = document.getElementById("password");
-    var toggleButton = document.getElementById("togglePassword");
-
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        toggleButton.classList.remove("fa-eye");
-        toggleButton.classList.add("fa-eye-slash");
-    } else {
-        passwordInput.type = "password";
-        toggleButton.classList.remove("fa-eye-slash");
-        toggleButton.classList.add("fa-eye");
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    var password = document.getElementById("password");
-    var textoAlerta = document.getElementById("textoAlerta");
-
-    password.addEventListener("keyup", function(event) {
-        var key = event.key;
-        var isUpperCase = key === key.toUpperCase() && key !== key.toLowerCase();
-        
-        if (isUpperCase) {
-            textoAlerta.style.display = "block";
+        if (isValidEmail) {
+            alert('E-mail válido. Você pode cadastrar uma senha.');
         } else {
-            textoAlerta.style.display = "none";
+            alert('E-mail não encontrado. Entre em contato com o suporte.');
         }
     });
+
+    async function searchEmail(email) {
+        try {
+            const response = await fetch('http://localhost:3000/searchEmail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+            if (response.status === 200) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (error) {
+            console.error(error);
+            return false;
+        }
+    }
 });
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="assets/js/login.js"></script>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body style="background-image: url(/assets/video/video.gif)">
+    <div id="black-overlay">
+        <main id="container">
+
+    <!---------------------------------------------------------------- ALTERAR SENHA NO BANCO ------------------------------------------------------>
+<form id="login_form">
+    <div id="form_header" style="display: block;">
+        <h1 style="color: white; left: 35%;"> TOKEN</h1>
+    </div>
+    <div id="inputs">
+        <div class="input-box" style="width: 100%;">
+            <div class="input-field">
+                <input type="text" id="token" autocomplete="off" name="token" placeholder="cole seu token aqui" style="width: 431px; color: white;">
+            </div>
+        </div>
+        <button type="button" id="login_button" style="width: 100%;margin-top: 20px;">VALIDAR</button>
+    </div>
+</form>
+<form id="login_form" style="display: none;">
+    <div id="form_header" style="display: block;">
+        <h1 style="color: white; left: 35%;">NOVA SENHA</h1>
+    </div>
+    <div id="inputs">
+        <div class="input-box" style="width: 100%;">
+            <div class="input-field">
+                <input type="text" id="newPassword" autocomplete="off" name="newPassword" placeholder="digite sua nova senha" style="width: 431px; color: white;">
+            </div>
+        </div>
+        <button type="button" id="login_button" style="width: 100%;margin-top: 20px;">ENTRAR</button>
+    </div>
+</form>
+            <footer>
+                <img src="assets/imgs/200x150-br-horizontal.png" alt="" style="position: fixed;left: 75%;top: 80%;width: 153px;">
+              </footer>
+            
+        </main>
+    </div>
+</body>
+</html>
